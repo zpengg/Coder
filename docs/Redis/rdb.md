@@ -1,16 +1,16 @@
-# Rdb
+# Rdb 快照备份
 ## 操作
-### 保存 
+### 保存： 阻塞 + fork
  - SAVE 服务器阻塞
  - [[BGSAVE]] fork 出一个子进程，子进程会执行『将内存中的数据以 RDB 格式保存到磁盘中』这一过程
 
 BGSAVE 禁止同时 BGSAVE || SAVE（防竞争） BGWRITEAOF（性能，延后）
 
-### 载入 
+### 载入： dump.rdb
 拷贝redis备份文件（dump.rdb）到 /usr/local/redis/bin目录下 重启服务
 
 
-### 定期保存
+### 定期保存 (触发)
 `save nSeconds updateTimes`
 满足其中一个就会触发；
 默认
@@ -48,6 +48,6 @@ V/ value:
  encoding container_size| (LV)or (LKLV) or(LKScore)...
 
 ### 特殊
-inset ziplist 都会转字符串
+#### inset ziplist 都会转字符串
 ## 工具
 redis-check-dump

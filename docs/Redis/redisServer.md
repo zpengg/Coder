@@ -32,7 +32,7 @@ redis 所有数据库都保存着 redisServer.db 数组中
 
 ## redisDb 数组
 dbNum: 数据库个数  默认值 16
-db： [[rdisDb]] 数据库数组
+db： [[redisDb]] 数据库数组
 
 `SELECT n` 命令可以切换 redisClient.db 指向，默认 0 号 db
 

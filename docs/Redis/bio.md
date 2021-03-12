@@ -1,5 +1,4 @@
-# bio
-background I/O service
+# bio (background I/O service)
 目前有两种任务：fsync和close。每种任务一个队列和一个线程。
 
 ## fsync 

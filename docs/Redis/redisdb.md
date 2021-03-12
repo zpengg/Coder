@@ -25,7 +25,7 @@
 ```c
 typedef struct redisDb {
         dict *dict;                 /* 据库的键空间 keyspace */
-        dict *expires;              /* 设置了过期时间的 key 集合 */
+        dict *expires;              /* 过期时间值dict */
         dict *blocking_keys;        /* 客户端阻塞等待的 key 集合 (BLPOP)*/
         dict *ready_keys;           /* 已就绪的阻塞 key 集合 (PUSH) */
         dict *watched_keys;         /* 在事务中监控受监控的 key 集合 */

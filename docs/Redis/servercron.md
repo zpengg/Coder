@@ -1,7 +1,7 @@
 # serverCron 100ms 
 100 ms interval
  - 更新服务器时间缓存 （不精确）
- - lruclock
+ - lruclock update
  - stat_peak_memory 内存峰值
  - trackOperationsPerSecond() 抽样估算
  - shutdown_asap 关闭讯号SIGTERM (kill -15) sigtermHandler()

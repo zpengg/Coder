@@ -18,7 +18,7 @@
 quicklist 结构是在 redis 3.2 版本中新加的数据结构，用在列表的底层实现。
 adlist(linked list) 可以说是没有出场的余地了
 
-## 结构
+## 结构（ 双端 套ziplist）
 ```C 
 typedef struct quicklistNode {
     struct quicklistNode *prev;

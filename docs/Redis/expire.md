@@ -52,8 +52,8 @@ EXPIREAT --> PEXPIREAT
 清理过程是阻塞的， 样本池抽样
 
 ## 过期键 在持久化、复制功能 的影响
-
 ### RDB 
+[[rdb]]
 #### 生成
 忽略过期
 #### 载入
@@ -63,6 +63,7 @@ EXPIREAT --> PEXPIREAT
 结果 多是忽略
 
 ### AOF
+[[aof]]
 AOF生成时，键被惰性删除时 AOF中有显式DEL记录
 AOF重写时，会忽略过期键
 
